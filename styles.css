@@ -1,0 +1,270 @@
+@font-face {
+  font-family: myFont;
+  src: url(fonts/main.sty.ttf);
+}
+
+@font-face {
+  font-family: ranchino;
+  src: url(fonts/ranchino.otf);
+}
+
+@font-face {
+  font-family: curly;
+  src: url(fonts/Curly.ttf);
+}
+
+* {
+  font-family: curly;
+  color: black;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(1, 65, 177);
+  padding: 5px 10px;
+}
+
+.logo-field {
+  position: relative;
+  height: 50px;
+}
+
+.dapper {
+  color: white;
+  font-size: 2.5rem;
+  font-family: ranchino;
+  position: absolute;
+}
+
+.plus1 {
+  font-family: ranchino;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.627);
+  top: -10px;
+  left: 110px;
+  font-size: 2rem;
+}
+
+.plus2 {
+  font-family: ranchino;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.627);
+  top: -10px;
+  left: 113px;
+  font-size: 2rem;
+}
+.plus3 {
+  font-family: ranchino;
+  position: absolute;
+  color: white;
+  top: -10px;
+  left: 117px;
+  font-size: 2rem;
+}
+
+.aside {
+  font-family: sans-serif;
+  position: absolute;
+  color: rgb(239, 236, 236);
+  font-weight: 700;
+  font-size: 9px;
+  bottom: -5px;
+  left: 35px;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  height: 54px;
+}
+
+a {
+  margin-right: 10px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: ranchino;
+}
+
+#featured,
+#our-products {
+  margin: 5px 0 30px 0;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 auto 0;
+  overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgba(70, 70, 70, 0.444);
+}
+
+.intro,
+.faqs-intro {
+  font-family: myFont;
+  font-size: 1.5rem;
+  font-weight: 400px;
+  margin: 10px;
+}
+
+.card {
+  margin: 0 8px 10px 0;
+}
+
+.product-info {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 21px;
+  font-family: Verdana;
+  text-wrap: wrap;
+}
+
+.price-talk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  display: inline-block;
+  margin: 5px 20px 10px 10px;
+  font-weight: 300;
+  font-style: oblique;
+  font-size: 30px;
+  color: rgba(22, 197, 22, 0.788);
+}
+
+.buy {
+  display: flex;
+  background-color: rgba(24, 24, 240, 0.977);
+  color: white;
+  border-radius: 15px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  padding: 8px 50px 8px 50px;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buy:hover {
+  background-color: white;
+  color: rgba(24, 24, 240, 0.977);
+  transition: 0.5s;
+  border: 1px solid rgba(24, 24, 240, 0.977);
+}
+
+.whatsapp-logo {
+  width: 30px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contacts div a img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqs-intro {
+  letter-spacing: 5px;
+}
+.question {
+  font-size: 40px;
+  margin: 5px 0 0 0;
+  white-space: nowrap;
+}
+
+.answer {
+  margin-top: 10px;
+  font-size: large;
+}
+
+.hidden {
+  display: none;
+}
+
+/* h3 {
+  font-size: 40px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-style: normal;
+} */
+
+.question-box1,
+.question-box2,
+.question-box3 {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-box {
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 10px 0 0;
+}
+
+.arrow1,
+.arrow2,
+.arrow3 {
+  width: 100%;
+  margin-right: 40px;
+  transition: 0.25s;
+}
+
+.rotate {
+  rotate: 90deg;
+  transition: 0.15s;
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70px;
+  }
+  .logo-field {
+    position: absolute;
+    left: 40%;
+    top: 2px;
+  }
+  .nav {
+    position: absolute;
+    bottom: 1px;
+  }
+  .intro {
+    text-align: center;
+  }
+}
