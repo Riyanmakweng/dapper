@@ -1,25 +1,7 @@
 "use strict";
 
 const product1 = {
-  img: "img/car2.jpg",
-  product_info: "Levelz, Black tracksuit piece",
-  price: 7500,
-  category: "clothes",
-  productNo: 1,
-  product_seller: "Dapper Stores",
-  type: "featured",
-};
-const product7 = {
-  img: "img/car2.jpg",
-  product_info: "Levelz, Black tracksuit piece",
-  price: 7500,
-  category: "clothes",
-  productNo: 1,
-  product_seller: "Dapper Stores",
-  type: "featured",
-};
-const product8 = {
-  img: "img/car2.jpg",
+  img: "imgs/car2.jpg",
   product_info: "Levelz, Black tracksuit piece",
   price: 7500,
   category: "clothes",
@@ -29,7 +11,7 @@ const product8 = {
 };
 
 const product2 = {
-  img: "img/car3.jpg",
+  img: "imgs/car3.jpg",
   product_info: "Black Shirt, Long Sleeved",
   price: 8500,
   category: "clothes",
@@ -39,7 +21,7 @@ const product2 = {
 };
 
 const product3 = {
-  img: "img/car4.jpg",
+  img: "imgs/car4.jpg",
   product_info: "Ring Light",
   price: 7500,
   category: "clothes",
@@ -49,7 +31,7 @@ const product3 = {
 };
 
 const product4 = {
-  img: "img/car4.jpg",
+  img: "imgs/car4.jpg",
   product_info: "Ring Light",
   price: 7500,
   category: "clothes",
@@ -59,7 +41,7 @@ const product4 = {
 };
 
 const product5 = {
-  img: "img/car4.jpg",
+  img: "imgs/car4.jpg",
   product_info: "Ring Light",
   price: 7500,
   category: "clothes",
@@ -69,7 +51,7 @@ const product5 = {
 };
 
 const product6 = {
-  img: "img/car4.jpg",
+  img: "imgs/car4.jpg",
   product_info: "Ring Light",
   price: 7500,
   category: "clothes",
@@ -78,23 +60,14 @@ const product6 = {
   type: "normal",
 };
 
-const products = [
-  product1,
-  product2,
-  product3,
-  product4,
-  product5,
-  product6,
-  product7,
-  product8,
-];
+const products = [product1, product2, product3, product4, product5, product6];
 
 const featuredProduct = products.filter((pro) => pro.type === "featured");
 const ourProduct = products.filter((pro) => pro.type === "normal");
 
 // Select Elements
-const featuredProducts = document.querySelector(".container1");
-const ourProducts = document.querySelector(".container2");
+const featuredProducts = document.querySelector(".container");
+const ourProducts = document.querySelector(".our-products");
 
 const question = document.querySelectorAll(".question");
 const question1 = document.querySelector(".question-box1");
@@ -114,16 +87,17 @@ const displayFeaturedProduct = function () {
     featuredProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-            <img src="${product.img}" alt="" width="300px" height="350px" loading="lazy">
-            <p class="product-info">${product.product_info}</p>
-            <p class="seller">${product.product_seller}</p>
-            <div class="price-talk">
-              <p class="price"><span class="naira">&#8358 </span>${product.price}</p>
-              <a href="https://wa.link/rpjarh" class="buy" target="_blank">
-              <img src="img/pngwing.com (4).png" alt="" class="whatsapp-logo">
-              Lets talk</a>
-            </div>
-          </div>`
+          <img src="${product.img}" alt="" width="300px" height="400px" loading="lazy" >
+          <p class="product-info">${product.product_info}</p>
+          <p class="seller">${product.product_seller}</p>
+          <div class="price-talk">
+            <p class="price">&#8358 ${product.price}</p>
+          <a href="https://wa.link/rpjarh" class="buy" target="_blank">
+            <img src="imgs/pngwing.com.png" alt="" class="whatsapp-logo">
+            Lets talk
+            </a>
+          </div>
+        </div>`
     );
   });
 };
@@ -134,16 +108,17 @@ const displayOurProduct = function () {
     ourProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-            <img src="${product.img}" alt="" width="300px" height="350px" loading="lazy">
-            <p class="product-info">${product.product_info}</p>
-            <p class="seller">${product.product_seller}</p>
-            <div class="price-talk">
-              <p class="price"><span class="naira">&#8358 </span>${product.price}</p>
-              <a href="https://wa.link/rpjarh" class="buy" target="_blank">
-              <img src="img/pngwing.com (4).png" alt="" class="whatsapp-logo">
-              Lets talk</a>
-            </div>
-          </div>`
+          <img src="${product.img}" alt="" class='image' width="300px" height="400px" loading="lazy">
+          <p class="product-info">${product.product_info}</p>
+          <p class="seller">${product.product_seller}</p>
+          <div class="price-talk">
+            <p class="price">&#8358 ${product.price}</p>
+          <a href="https://wa.link/rpjarh" class="buy" target="_blank">
+            <img src="imgs/pngwing.com.png" alt="" class="whatsapp-logo">
+            Lets talk
+            </a>
+          </div>
+        </div>`
     );
   });
 };
