@@ -87,7 +87,7 @@ const displayFeaturedProduct = function () {
     featuredProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-          <img src="${product.img}" alt="" width="300px" height="400px">
+          <img src="${product.img}" alt="" width="300px" height="400px" loading="lazy" >
           <p class="product-info">${product.product_info}</p>
           <p class="seller">${product.product_seller}</p>
           <div class="price-talk">
@@ -108,7 +108,7 @@ const displayOurProduct = function () {
     ourProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-          <img src="${product.img}" alt="" class='image' width="300px" height="400px">
+          <img src="${product.img}" alt="" class='image' width="300px" height="400px" loading="lazy">
           <p class="product-info">${product.product_info}</p>
           <p class="seller">${product.product_seller}</p>
           <div class="price-talk">
