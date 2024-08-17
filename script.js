@@ -1,73 +1,147 @@
 "use strict";
 
 const product1 = {
-  img: "imgs/car2.jpg",
-  product_info: "Levelz, Black tracksuit piece",
-  price: 7500,
-  category: "clothes",
-  productNo: 1,
+  img: "img/mini-zirconia.jpg",
+  product_info: "Mini Zirconia set, Non tarnish",
+  price: 6000,
+  category: "jewelery",
   product_seller: "Dapper Stores",
   type: "featured",
+};
+
+const product8 = {
+  img: "img/crystal-earrings.jpg",
+  product_info: "Simple but elegant sey of crystal earrings, non tanish",
+  price: 4000,
+  category: "jewelery",
+  product_seller: "Dapper Stores",
+  type: "normal",
 };
 
 const product2 = {
-  img: "imgs/car3.jpg",
-  product_info: "Black Shirt, Long Sleeved",
-  price: 8500,
+  img: "img/steel-earrings.jpg",
+  product_info: "Steel Earrings, Non Tarnish",
+  price: 4000,
   category: "clothes",
-  productNo: 2,
   product_seller: "Dapper Stores",
-  type: "featured",
+  type: "normal",
 };
 
 const product3 = {
-  img: "imgs/car4.jpg",
-  product_info: "Ring Light",
-  price: 7500,
+  img: "img/steel-earrings1.jpg",
+  product_info: "Steel Earrings, Non Tarnish",
+  price: 4000,
   category: "clothes",
-  productNo: 3,
   product_seller: "Dapper Stores",
   type: "featured",
 };
 
 const product4 = {
-  img: "imgs/car4.jpg",
-  product_info: "Ring Light",
-  price: 7500,
+  img: "img/stanley-mug.jpg",
+  product_info: "Stanley mug",
+  price: 23000,
   category: "clothes",
-  productNo: 3,
   product_seller: "Dapper Stores",
-  type: "normal",
+  type: "featured",
 };
 
 const product5 = {
-  img: "imgs/car4.jpg",
-  product_info: "Ring Light",
-  price: 7500,
+  img: "img/black-jean-shorts.jpg",
+  product_info: "Black Jean Shorts",
+  price: 30000,
   category: "clothes",
-  productNo: 3,
   product_seller: "Dapper Stores",
   type: "normal",
 };
 
 const product6 = {
-  img: "imgs/car4.jpg",
-  product_info: "Ring Light",
-  price: 7500,
+  img: "img/blue-jean-mens-short.jpg",
+  product_info: "Blue Jean Mens Shorts",
+  price: 30000,
   category: "clothes",
   productNo: 3,
   product_seller: "Dapper Stores",
   type: "normal",
 };
 
-const products = [product1, product2, product3, product4, product5, product6];
+const product7 = {
+  img: "img/brilliant-round-cut.jpg",
+  product_info: "Brilliant round cut Zirconia earrings",
+  price: 4000,
+  category: "jewelery",
+  product_seller: "Dapper Stores",
+  type: "featured",
+};
+
+const product9 = {
+  img: "img/dark-blue-jean-mens-short.jpg",
+  product_info: "Dark Blue Jean Men Shorts",
+  price: 30000,
+  category: "clothes",
+  productNo: 3,
+  product_seller: "Dapper Stores",
+  type: "featured",
+};
+
+const product10 = {
+  img: "img/long-blue-skeleton-jean-trouser.jpg",
+  product_info: "Long Blue Skeleton Jean Trouser",
+  price: 35000,
+  category: "clothes",
+  productNo: 3,
+  product_seller: "Dapper Stores",
+  type: "normal",
+};
+const product11 = {
+  img: "img/black-jean-trouser.jpg",
+  product_info: "Black Jean Trouser",
+  price: 30000,
+  category: "clothes",
+  productNo: 3,
+  product_seller: "Dapper Stores",
+  type: "featured",
+};
+const product12 = {
+  img: "img/blue-jean-trouser.jpg",
+  product_info: "Blue Jean Trouser",
+  price: 28000,
+  category: "clothes",
+  productNo: 3,
+  product_seller: "Dapper Stores",
+  type: "normal",
+};
+const product13 = {
+  img: "img/skeleton-jean-trouser.jpg",
+  product_info: "Skeleton Jean Trouser",
+  price: 45000,
+  category: "clothes",
+  productNo: 3,
+  product_seller: "Dapper Stores",
+  type: "featured",
+};
+
+const products = [
+  product13,
+  product9,
+  product3,
+  product4,
+  product5,
+  product6,
+  product7,
+  product8,
+  product2,
+  product10,
+  product11,
+  product12,
+  product1,
+];
 
 const featuredProduct = products.filter((pro) => pro.type === "featured");
 const ourProduct = products.filter((pro) => pro.type === "normal");
 
 // Select Elements
-const featuredProducts = document.querySelector(".container");
-const ourProducts = document.querySelector(".our-products");
+const featuredProducts = document.querySelector(".container1");
+const ourProducts = document.querySelector(".container2");
 
 const question = document.querySelectorAll(".question");
 const question1 = document.querySelector(".question-box1");
@@ -87,17 +161,16 @@ const displayFeaturedProduct = function () {
     featuredProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-          <img src="${product.img}" alt="" width="300px" height="400px" loading="lazy" >
-          <p class="product-info">${product.product_info}</p>
-          <p class="seller">${product.product_seller}</p>
-          <div class="price-talk">
-            <p class="price">&#8358 ${product.price}</p>
-          <a href="https://wa.link/rpjarh" class="buy" target="_blank">
-            <img src="imgs/pngwing.com.png" alt="" class="whatsapp-logo">
-            Lets talk
-            </a>
-          </div>
-        </div>`
+            <img src="${product.img}" alt="" width="300px" height="350px" loading="lazy">
+            <p class="product-info">${product.product_info}</p>
+            <p class="seller">${product.product_seller}</p>
+            <div class="price-talk">
+              <p class="price"><span class="naira">&#8358 </span>${product.price}</p>
+              <a href="https://wa.link/rpjarh" class="buy" target="_blank">
+              <img src="img/pngwing.com (4).png" alt="" class="whatsapp-logo">
+              Lets talk</a>
+            </div>
+          </div>`
     );
   });
 };
@@ -108,17 +181,16 @@ const displayOurProduct = function () {
     ourProducts.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-          <img src="${product.img}" alt="" class='image' width="300px" height="400px" loading="lazy">
-          <p class="product-info">${product.product_info}</p>
-          <p class="seller">${product.product_seller}</p>
-          <div class="price-talk">
-            <p class="price">&#8358 ${product.price}</p>
-          <a href="https://wa.link/rpjarh" class="buy" target="_blank">
-            <img src="imgs/pngwing.com.png" alt="" class="whatsapp-logo">
-            Lets talk
-            </a>
-          </div>
-        </div>`
+            <img src="${product.img}" alt="" width="300px" height="350px" loading="lazy">
+            <p class="product-info">${product.product_info}</p>
+            <p class="seller">${product.product_seller}</p>
+            <div class="price-talk">
+              <p class="price"><span class="naira">&#8358 </span>${product.price}</p>
+              <a href="https://wa.link/rpjarh" class="buy" target="_blank">
+              <img src="img/pngwing.com (4).png" alt="" class="whatsapp-logo">
+              Lets talk</a>
+            </div>
+          </div>`
     );
   });
 };
